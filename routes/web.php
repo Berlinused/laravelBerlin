@@ -37,3 +37,6 @@ Route::get('/f3', function () {
 Route::get('/new_f4', function () {
     return view('f4');
 })->name('berlin');
+
+use App\Http\Controllers\StudentController;
+Route::resource('students',StudentController::class);
