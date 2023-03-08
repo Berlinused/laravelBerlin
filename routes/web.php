@@ -41,6 +41,8 @@ Route::get('/new_f4', function () {
 
 // 這一段是自訂義，也要寫到 StudentController 裡面
 Route::get('/student/excel', [StudentController::class, 'excel'])->name('excel');
+Route::get('/student_child', [StudentController::class, 'childPage'])->name('child');
+Route::get('/student_app', [StudentController::class, 'appPage'])->name('app');
 
 
 Route::resource('students',StudentController::class);

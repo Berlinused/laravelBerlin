@@ -79,4 +79,12 @@ class StudentController extends Controller
     public function excel(){
         return view('student.excel');
     }
+
+    public function childPage(){
+        return view('child');
+    }
+
+    public function appPage(){
+        return view('/layouts/app');
+    }
 }
