@@ -12,9 +12,18 @@ class StudentController extends Controller
     public function index()
     {
         // return view('student.index');
+        // $data = [
+        //     'name' => 'Berlin', 
+        //     'category' => 'cat'
+        // ];
+        // return view('student.index', ['data' => $data]);
         $data = [
-            'name' => 'Berlin', 
-            'category' => 'cat'
+            ['name' => 'Berlin', 
+            'price' => '999'],
+            ['name' => 'Amer', 
+            'price' => '888'],
+            ['name' => 'SSR', 
+            'price' => '777'],
         ];
         return view('student.index', ['data' => $data]);
     }

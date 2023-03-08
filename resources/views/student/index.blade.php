@@ -2,13 +2,16 @@ Index students
 
 <a href="{{route('excel')}}">到excel</a>
 
-<h1>
-    hello {{$data['name']}}
-</h1>
-{{$data['name']}} - {{$data['category']}}
-<?php
-    dd($data);
-?>
+
+@php
+    
+@endphp
+
+@foreach ($data as $item)
+    <p>
+        {{$item['name']}} + {{$item['price']}}
+    </p>
+@endforeach
 
 <div>
 </div>
