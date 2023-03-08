@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +39,8 @@ Route::get('/new_f4', function () {
     return view('f4');
 })->name('berlin');
 
-use App\Http\Controllers\StudentController;
+// 這一段是自訂義，也要寫到 StudentController 裡面
+Route::get('/student/excel', [StudentController::class, 'excel'])->name('excel');
+
 Route::resource('students',StudentController::class);
 
-// 這一段是自訂義，也要寫到 StudentController 裡面
-Route::get('/student/excel', [StudentController::class, 'excel']);
