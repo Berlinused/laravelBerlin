@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\HotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,9 @@ Route::get('/student/excel', [StudentController::class, 'excel'])->name('excel')
 Route::get('/student_child', [StudentController::class, 'childPage'])->name('child');
 Route::get('/student_app', [StudentController::class, 'appPage'])->name('app');
 
+Route::get('/f1', [HotelController::class, 'f1']);
+Route::get('/f2', [HotelController::class, 'f2']);
+Route::get('/f3', [HotelController::class, 'f3']);
 
 Route::resource('students',StudentController::class);
 
