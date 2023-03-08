@@ -40,3 +40,6 @@ Route::get('/new_f4', function () {
 
 use App\Http\Controllers\StudentController;
 Route::resource('students',StudentController::class);
+
+// 這一段是自訂義，也要寫到 StudentController 裡面
+Route::get('/student/excel', [StudentController::class, 'excel']);
