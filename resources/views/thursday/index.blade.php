@@ -6,6 +6,9 @@
     {{dd($data)}}
 </DIV> --}}
 
+<div>
+    <a href="{{ route('thursday.create') }}"><button>GO Create</button></a>
+</div>
 <table>
     <thead>
         <tr>

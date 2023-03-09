@@ -23,7 +23,8 @@ class ThursdayController extends Controller
      */
     public function create()
     {
-        //
+        // dd('hello create');
+        return view('thursday.create');
     }
 
     /**
@@ -31,7 +32,14 @@ class ThursdayController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Thursday;
+ 
+        $data->name = $request->name;
+        $data->age = $request->age;
+ 
+        $data->save();
+
+        return redirect()->route('thursday.index');
     }
 
     /**
@@ -65,4 +73,5 @@ class ThursdayController extends Controller
     {
         //
     }
+
 }
