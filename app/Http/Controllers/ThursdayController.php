@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Thursday;
+
 class ThursdayController extends Controller
 {
     /**
@@ -11,6 +13,8 @@ class ThursdayController extends Controller
      */
     public function index()
     {
+        $data = Thursday::get();
+        dd($data);
         return view('thursday.index');
     }
 
