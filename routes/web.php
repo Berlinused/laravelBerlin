@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\HotelController;
-
+use App\Http\Controllers\ThursdayController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -51,3 +51,4 @@ Route::get('/f3', [HotelController::class, 'f3']);
 
 Route::resource('students',StudentController::class);
 
+Route::resource('thursday',ThursdayController::class);
