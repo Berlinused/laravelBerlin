@@ -27,3 +27,8 @@ return new class extends Migration
         Schema::dropIfExists('thursdays');
     }
 };
+
+// db 直接新增以下三筆資料
+// INSERT INTO `thursdays` (`id`, `created_at`, `updated_at`, `age`, `name`) VALUES (NULL, NULL, NULL, '20', 'amy')
+// INSERT INTO `thursdays` (`id`, `created_at`, `updated_at`, `age`, `name`) VALUES (NULL, NULL, NULL, '19', 'bob')
+// INSERT INTO `thursdays` (`id`, `created_at`, `updated_at`, `age`, `name`) VALUES (NULL, NULL, NULL, '18', 'sos')
