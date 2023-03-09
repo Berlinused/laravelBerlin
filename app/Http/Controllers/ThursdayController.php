@@ -14,7 +14,7 @@ class ThursdayController extends Controller
     public function index()
     {
         $data = Thursday::get();
-        dd($data);
+        // dd($data);
         return view('thursday.index', ['data' => $data]);
     }
 
