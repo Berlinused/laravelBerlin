@@ -13,12 +13,9 @@
         </th>
         <tr>
             <td>
-                <input type="text" name="id" value="1">
+                <input type="text" name="name" id="name" value="{{$data->name}}">
             </td>
-            <td>
-                <input type="text" name="name" id="name" value="2">
-            </td>
-            <td><input type="text" name="age" id="age" value="3"></td>
+            <td><input type="text" name="age" id="age" value="{{$data->age}}"></td>
         </tr>
         <tr>
             <td colspan="2"><button type="submit">送出</button></td>

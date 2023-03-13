@@ -60,8 +60,8 @@ class ThursdaysController extends Controller
         // $data = Thursday::get();
         $data = Thursday::find($id); // [補] find/where 是一樣的
         // $data = Thursday::where('id',$id); // 同[補]
-        dd($data);
-        return view('student.edit', ['data'=>$data]); //03 該筆資料丟到view
+        // dd($data);
+        return view('thursday.edit', ['data'=>$data]); //03 該筆資料丟到view
     }
 
     /**
