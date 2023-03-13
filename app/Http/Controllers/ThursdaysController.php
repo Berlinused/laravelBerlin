@@ -69,7 +69,10 @@ class ThursdaysController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // $input = $request->all();
+        $input = $request->except(['_token','_method']);
+        dd($input);
+        dd('update ok');
     }
 
     /**

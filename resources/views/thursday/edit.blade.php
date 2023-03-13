@@ -1,9 +1,11 @@
 <h2>
     Edit Page
 </h2>
-
-<form action="{{ route('thursdays.store') }}" method="post">
+{{-- 要照useful的格式寫 photos/{photo} --}}
+<form action="{{ route('thursdays.update', ['thursday' => $data->id]) }}" method="post">
     @csrf
+    {{-- method put --}}
+    @method('PUT') 
     <table style="border:1px solid gray;text-align:center">
         <th>
            name
