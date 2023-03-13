@@ -2,7 +2,7 @@
     Create Page
 </h2>
 
-<form action="{{ route('thursday.store') }}" method="post">
+<form action="{{ route('thursdays.store') }}" method="post">
     @csrf
     <table style="border:1px solid gray;text-align:center">
         <th>
