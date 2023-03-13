@@ -27,6 +27,9 @@
 <div>
     <a href="{{ route('thursdays.create') }}"><button>GO Create</button></a>
 </div>
+<div>
+    <a href="{{route('excel')}}">   <button> 下載 </button></a>
+</div>
 {{-- <div>
     <a href="{{ route('thursday.edit') }}"><button>GO Edit</button></a>
 </div> --}}
@@ -55,6 +58,7 @@
                 <td>
                     <a href="{{ route('thursdays.edit', ['thursday' => $item->id]) }}" class="btn btn-warning">修改</a>
                 </td>
+                
                 <td>
                     {{-- DEL --}}
                     {{-- 419 --}}

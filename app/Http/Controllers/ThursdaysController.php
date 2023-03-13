@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Thursday;
 
+use App\Exports\ThursdaysExport;
+use Maatwebsite\Excel\Facades\Excel;
 class ThursdaysController extends Controller
 {
     /**
@@ -91,4 +93,8 @@ class ThursdaysController extends Controller
         return redirect()->route('thursdays.index');
     }
 
+    public function export() 
+    {
+        return Excel::download(new ThursdaysExport, 'thursday.xlsx');
+    }
 }

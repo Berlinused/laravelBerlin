@@ -52,3 +52,4 @@ Route::get('/f3', [HotelController::class, 'f3']);
 Route::resource('students',StudentController::class);
 
 Route::resource('thursdays',ThursdaysController::class);
+Route::get('thursdays.excel',[ThursdaysController::class, 'export'])->name('excel');
