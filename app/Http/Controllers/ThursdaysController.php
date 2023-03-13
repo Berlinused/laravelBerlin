@@ -86,7 +86,7 @@ class ThursdaysController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        dd('刪除ok');
     }
 
 }
