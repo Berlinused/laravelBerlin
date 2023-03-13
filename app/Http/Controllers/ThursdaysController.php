@@ -86,7 +86,9 @@ class ThursdaysController extends Controller
      */
     public function destroy(string $id)
     {
-        dd('刪除ok');
+        // dd('刪除ok');
+        Thursday::find($id)->delete();
+        return redirect()->route('thursdays.index');
     }
 
 }
