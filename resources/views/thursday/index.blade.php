@@ -7,8 +7,11 @@
 </DIV> --}}
 
 <div>
-    <a href="{{ route('thursday.create') }}"><button>GO Create</button></a>
+    <a href="{{ route('thursdays.create') }}"><button>GO Create</button></a>
 </div>
+{{-- <div>
+    <a href="{{ route('thursday.edit') }}"><button>GO Edit</button></a>
+</div> --}}
 <table>
     <thead>
         <tr>
@@ -24,6 +27,9 @@
                 </td>
                 <td>
                     {{ $item->age }},
+                </td>
+                <td>
+                    <a href="{{(route('thursdays.edit',['thursday'=>$item->id]))}}">修改</a>
                 </td>
             </tr>
         @endforeach

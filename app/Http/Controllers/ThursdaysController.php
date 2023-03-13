@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Thursday;
 
-class ThursdayController extends Controller
+class ThursdaysController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -55,7 +55,8 @@ class ThursdayController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // dd($id);
+        return view('thursday.edit');
     }
 
     /**
