@@ -39,7 +39,7 @@ class ThursdaysController extends Controller
  
         $data->save();
 
-        return redirect()->route('thursday.index');
+        return redirect()->route('thursdays.index');
     }
 
     /**
@@ -71,8 +71,14 @@ class ThursdaysController extends Controller
     {
         // $input = $request->all();
         $input = $request->except(['_token','_method']);
-        dd($input);
-        dd('update ok');
+        // dd($input);
+        // dd('update ok');
+
+        $data = Thursday::find($id);
+        $data->name = $input['name'];
+        $data->age = $input['age'];
+        $data->save();
+        return redirect()->route('thursdays.index');
     }
 
     /**
