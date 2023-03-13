@@ -11,5 +11,7 @@ class Thursday extends Model
     protected $fillable = [
         'name',
         'age',
+        'created_at',
+        'updated_at'
     ];
 }

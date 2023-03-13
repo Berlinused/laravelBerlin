@@ -47,6 +47,12 @@
                     {{ $item->age }},
                 </td>
                 <td>
+                    {{ $item->created_at }},
+                </td>
+                <td>
+                    {{ $item->updated_at }},
+                </td>
+                <td>
                     <a href="{{ route('thursdays.edit', ['thursday' => $item->id]) }}" class="btn btn-warning">修改</a>
                 </td>
                 <td>
