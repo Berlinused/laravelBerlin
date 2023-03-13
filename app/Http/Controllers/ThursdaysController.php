@@ -55,8 +55,13 @@ class ThursdaysController extends Controller
      */
     public function edit(string $id)
     {
-        // dd($id);
-        return view('thursday.edit');
+        // dd($id); //01 確認ID是不是對的
+        // return view('thursday.edit'); //02 到view
+        // $data = Thursday::get();
+        $data = Thursday::find($id); // [補] find/where 是一樣的
+        // $data = Thursday::where('id',$id); // 同[補]
+        dd($data);
+        return view('student.edit', ['data'=>$data]); //03 該筆資料丟到view
     }
 
     /**
